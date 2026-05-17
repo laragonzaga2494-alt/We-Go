@@ -446,11 +446,11 @@ Our collaborations help us deliver complete event experiences tailored to your v
 
 <h3>Let's Plan Your Event</h3>
 
-<p><strong>Phone:</strong> +63 912 345 6789</p>
+<p><strong>Phone:</strong> +63 907 7472 017</p>
 
-<p><strong>Email:</strong> wegocatering@gmail.com</p>
+<p><strong>Email:</strong> thomvicente16@gmail.com</p>
 
-<p><strong>Facebook:</strong> We-Go Catering Services</p>
+<p><strong>Facebook:</strong> We Goo</p>
 
 <p><strong>Location:</strong> Philippines</p>
 
