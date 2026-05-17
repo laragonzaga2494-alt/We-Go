@@ -1,117 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>We-Go Catering Services</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>We-Go Event Organizers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+    --green:#1f6b45;
+    --lightgreen:#2f8b5c;
+    --gold:#d4af37;
+    --white:#ffffff;
+    --dark:#1b1b1b;
+    --gray:#f5f5f5;
+}
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f8f8f8;
+    font-family:'Nunito', sans-serif;
+    background:var(--gray);
     color:#333;
-    scroll-behavior:smooth;
 }
 
 /* HEADER */
 
 header{
+    position:fixed;
     width:100%;
-    background:#14532d;
+    top:0;
+    left:0;
+    z-index:1000;
     padding:18px 8%;
+    background:rgba(31,107,69,0.95);
     display:flex;
     justify-content:space-between;
     align-items:center;
-    position:fixed;
-    top:0;
-    z-index:1000;
+    backdrop-filter:blur(10px);
 }
 
 .logo{
-    color:#ffd54f;
-    font-size:32px;
-    font-weight:bold;
+    font-family:'Montserrat', sans-serif;
+    font-size:34px;
+    font-weight:800;
+    color:var(--gold);
 }
 
 .logo span{
-    color:white;
+    color:var(--white);
 }
 
 nav a{
     text-decoration:none;
     color:white;
-    margin-left:25px;
-    font-weight:bold;
+    margin-left:28px;
+    font-size:16px;
+    font-weight:700;
     transition:0.3s;
 }
 
 nav a:hover{
-    color:#ffd54f;
+    color:var(--gold);
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
-    height:100vh;
+    min-height:100vh;
     background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1600&auto=format&fit=crop');
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1800&auto=format&fit=crop');
     background-size:cover;
     background-position:center;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:120px 20px;
     color:white;
-    padding:20px;
+}
+
+.hero-content{
+    max-width:950px;
 }
 
 .hero-content h1{
-    font-size:70px;
-    margin-bottom:20px;
+    font-family:'Montserrat', sans-serif;
+    font-size:76px;
+    line-height:1.1;
+    margin-bottom:25px;
 }
 
 .hero-content p{
     font-size:22px;
-    max-width:800px;
-    margin:auto;
-    line-height:1.6;
+    line-height:1.8;
+    margin-bottom:35px;
 }
 
 .btn{
     display:inline-block;
-    margin-top:30px;
-    padding:15px 35px;
-    background:#ffd54f;
-    color:#14532d;
+    padding:16px 38px;
+    border-radius:50px;
     text-decoration:none;
-    font-weight:bold;
-    border-radius:30px;
+    font-weight:700;
     transition:0.3s;
+    font-size:17px;
 }
 
-.btn:hover{
+.btn-main{
+    background:var(--gold);
+    color:var(--dark);
+}
+
+.btn-main:hover{
     background:white;
 }
 
-/* GENERAL SECTIONS */
+/* GENERAL */
 
 section{
-    padding:90px 8%;
+    padding:100px 8%;
 }
 
 .section-title{
     text-align:center;
-    font-size:42px;
-    color:#14532d;
-    margin-bottom:50px;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-family:'Montserrat', sans-serif;
+    font-size:48px;
+    color:var(--green);
+    margin-bottom:10px;
+}
+
+.section-title p{
+    font-size:18px;
+    color:#666;
 }
 
 /* ABOUT */
@@ -119,98 +156,148 @@ section{
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px;
+    gap:50px;
     align-items:center;
 }
 
 .about img{
     width:100%;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 .about-text h3{
-    color:#14532d;
-    font-size:28px;
+    font-family:'Montserrat', sans-serif;
+    font-size:38px;
+    color:var(--green);
     margin-bottom:20px;
 }
 
 .about-text p{
-    line-height:1.8;
+    line-height:1.9;
     margin-bottom:20px;
+    font-size:18px;
 }
 
-/* SERVICES */
+/* PACKAGES */
 
-.services{
+.packages{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
 }
 
 .card{
     background:white;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
     transition:0.3s;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 .card:hover{
     transform:translateY(-10px);
 }
 
-.card h3{
-    color:#14532d;
-    margin-bottom:15px;
-    font-size:24px;
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
 }
 
-.card p{
-    line-height:1.6;
-}
-
-/* COLLABORATIONS */
-
-.collab{
-    background:#14532d;
+.card-header{
+    background:linear-gradient(to right,var(--green),var(--lightgreen));
+    padding:30px;
     color:white;
-    border-radius:20px;
-    text-align:center;
-    padding:60px 30px;
 }
 
-.collab h2{
-    font-size:40px;
+.card-header h3{
+    font-family:'Montserrat', sans-serif;
+    font-size:28px;
+}
+
+.card-body{
+    padding:30px;
+}
+
+.card-body p{
+    line-height:1.8;
     margin-bottom:20px;
 }
 
-.collab p{
-    max-width:800px;
-    margin:auto;
-    line-height:1.8;
+.card-body ul{
+    padding-left:20px;
+}
+
+.card-body li{
+    margin-bottom:12px;
+    line-height:1.6;
+}
+
+/* BOOKING SECTION */
+
+.booking{
+    background:
+    linear-gradient(rgba(31,107,69,0.92), rgba(31,107,69,0.92)),
+    url('https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    border-radius:30px;
+    padding:70px;
+}
+
+.booking h2{
+    font-family:'Montserrat', sans-serif;
+    text-align:center;
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.booking p{
+    text-align:center;
+    margin-bottom:40px;
     font-size:18px;
 }
 
-/* GALLERY */
-
-.gallery{
+.booking-form{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
 }
 
-.gallery img{
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
     width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:15px;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-family:'Nunito', sans-serif;
+}
+
+.booking-form textarea{
+    grid-column:1/3;
+    resize:none;
+    height:140px;
+}
+
+.booking-form button{
+    grid-column:1/3;
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    background:var(--gold);
+    color:black;
+    font-size:18px;
+    font-weight:800;
+    cursor:pointer;
     transition:0.3s;
 }
 
-.gallery img:hover{
-    transform:scale(1.03);
+.booking-form button:hover{
+    background:white;
 }
 
 /* CONTACT */
@@ -221,40 +308,45 @@ section{
 
 .contact-box{
     background:white;
+    border-radius:25px;
     padding:50px;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
     max-width:700px;
     margin:auto;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .contact-box h3{
-    color:#14532d;
+    font-size:38px;
+    color:var(--green);
     margin-bottom:20px;
-    font-size:30px;
+    font-family:'Montserrat', sans-serif;
 }
 
 .contact-box p{
-    margin:10px 0;
+    margin:15px 0;
     font-size:18px;
 }
 
 /* FOOTER */
 
 footer{
-    background:#111;
+    background:var(--green);
     color:white;
     text-align:center;
-    padding:25px;
-    margin-top:40px;
+    padding:30px;
+    margin-top:50px;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
 
     .hero-content h1{
-        font-size:45px;
+        font-size:50px;
     }
 
     .hero-content p{
@@ -265,8 +357,17 @@ footer{
         grid-template-columns:1fr;
     }
 
-    nav{
-        display:none;
+    .booking-form{
+        grid-template-columns:1fr;
+    }
+
+    .booking-form textarea,
+    .booking-form button{
+        grid-column:1;
+    }
+
+    .booking{
+        padding:40px 25px;
     }
 }
 
@@ -279,13 +380,15 @@ footer{
 
 <header>
 
-<div class="logo">WE-GO <span>Catering</span></div>
+<div class="logo">
+WE-GO <span>Events</span>
+</div>
 
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
+<a href="#services">Packages</a>
+<a href="#booking">Book Now</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -297,15 +400,17 @@ footer{
 
 <div class="hero-content">
 
-<h1>We-Go Catering Services</h1>
+<h1>Where Elegant Events Come To Life</h1>
 
 <p>
-Premium Catering Services at Affordable Rates —
-Customized to Your Preferences with Elegant Food Presentation,
-Exceptional Service, and Wide Collaborative Event Packages.
+We-Go Event Organizers creates premium, stress-free celebrations with luxury styling,
+professional coordination, and unforgettable guest experiences —
+all tailored to your vision and budget.
 </p>
 
-<a href="#contact" class="btn">Book Your Event</a>
+<a href="#booking" class="btn btn-main">
+Book Your Event
+</a>
 
 </div>
 
@@ -315,26 +420,30 @@ Exceptional Service, and Wide Collaborative Event Packages.
 
 <section id="about">
 
-<h2 class="section-title">About Us</h2>
+<div class="section-title">
+<h2>About We-Go</h2>
+<p>Luxury Event Experiences with a Personal Touch</p>
+</div>
 
 <div class="about">
 
-<img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop">
 
 <div class="about-text">
 
-<h3>Elegant Catering Made Affordable</h3>
+<h3>Your Vision, Beautifully Executed</h3>
 
 <p>
-At <strong>We-Go Catering Services</strong>, we believe that every celebration deserves premium-quality food and excellent service without expensive pricing.
+At We-Go Event Organizers, we believe every client deserves to enjoy their own celebration without stress.
+From intimate gatherings to large-scale luxury events, our team transforms ideas into elegant realities.
 </p>
 
 <p>
-We provide fully customizable catering packages tailored to your style, theme, taste, and budget. Whether it's an intimate family gathering or a grand corporate event, our team is ready to deliver unforgettable dining experiences.
+Our signature approach combines creativity, hospitality, logistics, and premium styling to create seamless events that guests will remember forever.
 </p>
 
 <p>
-We also collaborate with decorators, event organizers, photographers, churches, schools, and corporate partners to make your event complete and stress-free.
+Whether you need day-of coordination or complete full-service management, We-Go is ready to make your event extraordinary.
 </p>
 
 </div>
@@ -343,94 +452,185 @@ We also collaborate with decorators, event organizers, photographers, churches, 
 
 </section>
 
-<!-- SERVICES -->
+<!-- PACKAGES -->
 
 <section id="services">
 
-<h2 class="section-title">Our Services</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>Wedding Catering</h3>
-<p>
-Elegant buffet setups and premium menus for your special day.
-</p>
+<div class="section-title">
+<h2>Premium Service Packages</h2>
+<p>Flexible Event Solutions Designed Around Your Needs</p>
 </div>
 
-<div class="card">
-<h3>Birthday Parties</h3>
-<p>
-Affordable catering packages for kids, adults, and themed parties.
-</p>
-</div>
+<div class="packages">
+
+<!-- PACKAGE 1 -->
 
 <div class="card">
-<h3>Corporate Events</h3>
-<p>
-Professional catering services for meetings, seminars, and conferences.
-</p>
+
+<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop"
+alt="Essential Coordinator">
+
+<div class="card-header">
+<h3>Essential Coordinator</h3>
 </div>
 
-<div class="card">
-<h3>Customized Menus</h3>
+<div class="card-body">
+
 <p>
-Choose your preferred dishes and create your own catering experience.
+Perfect for prepared planners who need expert day-of execution.
 </p>
+
+<ul>
+<li>Custom Event Timelines</li>
+<li>Vendor Coordination</li>
+<li>Setup & Teardown Management</li>
+<li>On-Site Event Coordinator</li>
+<li>Professional Logistics Handling</li>
+</ul>
+
 </div>
 
-<div class="card">
-<h3>Food Tray Packages</h3>
-<p>
-Perfect for family gatherings, office events, and celebrations.
-</p>
 </div>
 
+<!-- PACKAGE 2 -->
+
 <div class="card">
-<h3>Event Collaborations</h3>
+
+<img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=1200&auto=format&fit=crop"
+alt="Elevated Experience">
+
+<div class="card-header">
+<h3>Elevated Experience</h3>
+</div>
+
+<div class="card-body">
+
 <p>
-Partnering with decorators, coordinators, and event suppliers.
+Elegant styling combined with smooth operational management.
 </p>
+
+<ul>
+<li>Planning Assistance</li>
+<li>Elegant Event Styling</li>
+<li>Decor & Centerpieces</li>
+<li>Program Flow Management</li>
+<li>Enhanced Guest Experience</li>
+</ul>
+
+</div>
+
+</div>
+
+<!-- PACKAGE 3 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=1200&auto=format&fit=crop"
+alt="Grand Celebration">
+
+<div class="card-header">
+<h3>Grand Celebration</h3>
+</div>
+
+<div class="card-body">
+
+<p>
+Luxury full-service event planning for unforgettable celebrations.
+</p>
+
+<ul>
+<li>A-to-Z Event Planning</li>
+<li>Supplier Integration</li>
+<li>Premium Styling Concepts</li>
+<li>Senior Event Directors</li>
+<li>Luxury Guest Experience</li>
+</ul>
+
+</div>
+
+</div>
+
+<!-- PACKAGE 4 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop"
+alt="Bespoke Collection">
+
+<div class="card-header">
+<h3>Bespoke Collection</h3>
+</div>
+
+<div class="card-body">
+
+<p>
+Fully customized events designed around your imagination.
+</p>
+
+<ul>
+<li>Custom Culinary Design</li>
+<li>Flexible Service Models</li>
+<li>Themed Experiences</li>
+<li>Adaptive Staffing</li>
+<li>Unique Luxury Concepts</li>
+</ul>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- COLLABORATIONS -->
+<!-- BOOKING -->
 
-<section>
+<section id="booking">
 
-<div class="collab">
+<div class="booking">
 
-<h2>Wide Range of Collaborations</h2>
+<h2>Book Your Event</h2>
 
 <p>
-We-Go Catering Services proudly works with event coordinators,
-churches, schools, businesses, photographers, and party organizers
-to create seamless and memorable celebrations.
-Our collaborations help us deliver complete event experiences tailored to your vision.
+Tell us about your dream celebration and our team will contact you for a personalized consultation.
 </p>
 
-</div>
+<form class="booking-form">
 
-</section>
+<input type="text" placeholder="Full Name" required>
 
-<!-- GALLERY -->
+<input type="email" placeholder="Email Address" required>
 
-<section id="gallery">
+<input type="tel" placeholder="Phone Number" required>
 
-<h2 class="section-title">Food Gallery</h2>
+<select required>
+<option value="">Select Event Type</option>
+<option>Wedding</option>
+<option>Birthday Celebration</option>
+<option>Corporate Event</option>
+<option>Anniversary</option>
+<option>Private Party</option>
+<option>Luxury Gala</option>
+<option>Other</option>
+</select>
 
-<div class="gallery">
+<input type="date" required>
 
-<img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop">
+<select required>
+<option value="">Preferred Package</option>
+<option>Essential Coordinator</option>
+<option>Elevated Experience</option>
+<option>Grand Celebration</option>
+<option>Bespoke Collection</option>
+</select>
 
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop">
+<textarea placeholder="Tell us about your event vision, guest count, preferred theme, and special requests..."></textarea>
 
-<img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=1200&auto=format&fit=crop">
+<button type="submit">
+Submit Booking Request
+</button>
 
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+</form>
 
 </div>
 
@@ -440,21 +640,22 @@ Our collaborations help us deliver complete event experiences tailored to your v
 
 <section id="contact" class="contact">
 
-<h2 class="section-title">Contact Us</h2>
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>Let's Create Something Extraordinary Together</p>
+</div>
 
 <div class="contact-box">
 
-<h3>Let's Plan Your Event</h3>
-
-<p><strong>Phone:</strong> +63 907 7472 017</p>
+<h3>We-Go Event Organizers</h3>
 
 <p><strong>Email:</strong> thomvicente16@gmail.com</p>
 
-<p><strong>Facebook:</strong> [We Goo](https://www.facebook.com/profile.php?id=61589638904526)o</p>
+<p><strong>Phone:</strong> +63 907 747 2017</p>
+
+<p><strong>Facebook:</strong> We-Go Event Organizers</p>
 
 <p><strong>Location:</strong> Philippines</p>
-
-<a href="#" class="btn">Send Inquiry</a>
 
 </div>
 
@@ -465,7 +666,7 @@ Our collaborations help us deliver complete event experiences tailored to your v
 <footer>
 
 <p>
-© 2026 We-Go Catering Services | Premium Catering at Affordable Rates
+© 2026 We-Go Event Organizers | Premium Event Management Services
 </p>
 
 </footer>
