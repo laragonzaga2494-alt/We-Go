@@ -594,7 +594,10 @@ Fully customized events designed around your imagination.
 Tell us about your dream celebration and our team will contact you for a personalized consultation.
 </p>
 
-<form class="booking-form">
+<form class="booking-form"
+action="mailto:thomvicente16@gmail.com"
+method="POST"
+enctype="text/plain">
 
 <input type="text" placeholder="Full Name" required>
 
