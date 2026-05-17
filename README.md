@@ -450,7 +450,7 @@ Our collaborations help us deliver complete event experiences tailored to your v
 
 <p><strong>Email:</strong> thomvicente16@gmail.com</p>
 
-<p><strong>Facebook:</strong> We Goo</p>
+<p><strong>Facebook:</strong> [We Goo](https://www.facebook.com/profile.php?id=61589638904526)o</p>
 
 <p><strong>Location:</strong> Philippines</p>
 
